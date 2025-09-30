@@ -1,0 +1,43 @@
+# FastAPI and Supabase
+fastapi
+uvicorn[standard]
+python-dotenv
+supabase
+gotrue
+
+# Pre-processing
+rembg
+mediapipe
+
+# IDM-VTON Dependencies
+# Pinned versions from environment.yaml
+accelerate==0.25.0
+torchmetrics==1.2.1
+tqdm==4.66.1
+transformers==4.36.2
+diffusers==0.25
+einops==0.7.0
+bitsandbytes==0.39.0
+scipy==1.11.1
+opencv-python
+gradio==4.24.0
+fvcore
+cloudpickle
+omegaconf
+pycocotools
+basicsr
+av
+onnxruntime==1.16.2
+xformers
+lpips
+peft
+
+# Unpinned from original requirements.txt, but likely needed
+numpy
+Pillow
+
+# PyTorch - version from environment.yaml is 2.1.0, but no build is specified.
+# Let pip handle the correct version based on the environment.
+torch
+torchvision
+torchaudio

@@ -1,0 +1,83 @@
+# ==============================================================================
+# 1. SEGURANÇA E AMBIENTE (Crucial: NUNCA suba senhas ou ambientes)
+# ==============================================================================
+
+# Credenciais e Variáveis de Ambiente
+# Bloqueia todos os arquivos .env para impedir exposição de chaves.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example # Remova esta linha se quiser subir o template de exemplo
+
+# Ambientes Virtuais Python
+# Bloqueia todas as pastas de ambiente virtual
+/venv/
+/.venv/
+/env/
+/backend/venv/
+
+# Pastas de Cache e Logs (Locais e Temporárias)
+# =============================================
+.DS_Store             # Mac OS
+Thumbs.db             # Windows
+__pycache__/          # Cache de bytecode Python
+*.pyc
+*.pyo
+*.pyd
+
+# Logs e Dados de Sessão
+*.log
+*.tmp
+*.bak
+.idea/                # Arquivos de configuração do PyCharm/IntelliJ
+.vscode/              # Arquivos de configuração de usuário do VSCode (se não forem compartilhados)
+.python_history
+.astropy/
+profile_default/
+ipython_config.py
+logs/                 # Sua pasta de logs de execução e versionamento
+gemini-cli/           # Sua pasta de arquivos de contexto e relatórios do Gemini (Logs de conversa)
+
+# Cache de Ferramentas de Teste e Formatação
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.ruff_cache/
+htmlcov/
+
+# ==============================================================================
+# 2. IA / MODELOS GRANDES (Específico do VTO-Arenque)
+# ==============================================================================
+
+# Bloqueia a pasta de Checkpoints/Pesos (Arquivos Gigantes)
+# O Git não deve rastrear modelos grandes.
+backend/idm_vton_model/ckpt/
+*.pkl
+*.onnx
+*.pth
+*.h5
+
+# Pastas de Debug e Processamento de Imagem
+backend/debug_images/
+backend/temp_processing_images/
+
+# ==============================================================================
+# 3. FRONTEND (Node.js/React)
+# ==============================================================================
+
+# Dependências e Compilação do Node.js
+/frontend/node_modules
+/frontend/build
+/frontend/coverage
+/.pnp
+.pnp.js
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
